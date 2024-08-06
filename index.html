@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriels Pomodoro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>pomodoro</h1>
+        <div class="mode-switch">
+            <button id="work-btn" class="active">work</button>
+            <button id="break-btn">break</button>
+        </div>
+        <div class="timer-container">
+            <svg id="progress-ring" width="260" height="260">
+                <defs>
+                    <filter id="glow">
+                        <feGaussianBlur stdDeviation="5" result="coloredBlur"></feGaussianBlur>
+                        <feMerge>
+                            <feMergeNode in="coloredBlur"></feMergeNode>
+                            <feMergeNode in="SourceGraphic"></feMergeNode>
+                        </feMerge>
+                    </filter>
+                </defs>
+                <circle cx="130" cy="130" r="120" id="background-circle" filter="url(#glow)"></circle>
+                <circle cx="130" cy="130" r="100" id="progress"transform="rotate(-90 110 110)"></circle>
+            </svg>
+            <div class="timer">
+                <span id="time" contenteditable="true">45:00</span>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="start-btn"class="active">start</button>
+            <button id="pause-btn">pause</button>
+            <button id="reset-btn">reset</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
