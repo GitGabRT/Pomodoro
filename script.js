@@ -50,6 +50,8 @@ function updateProgressRing() {
 }
 
 function startTimer() {
+    const alarmSound = document.getElementById('alarm-sound');
+    alarmSound.volume = 0.2
     setActiveButton('start');
     if (!timer) {
         disableEditing(true);
@@ -61,6 +63,7 @@ function startTimer() {
             } else {
                 clearInterval(timer);
                 timer = null;
+                alarmSound.play();
                 if (isWorkMode) {
                     switchMode(false);
                 } else {
