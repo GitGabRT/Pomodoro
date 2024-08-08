@@ -40,7 +40,7 @@ function updateDisplay() {
     const seconds = (timeRemaining % 60).toString().padStart(2, '0');
     timeDisplay.textContent = `${minutes}:${seconds}`;
 }
-//funkar ej fruktansvärt frustrerande
+
 function updateProgressRing() {
     const totalTime = isWorkMode ? workTime : breakTime;
     const circumference = 2 * Math.PI * 100; // Circumference of the circle with radius 100
@@ -63,13 +63,16 @@ function startTimer() {
             } else {
                 clearInterval(timer);
                 timer = null;
+                
                 alarmSound.play();
                 if (isWorkMode) {
                     switchMode(false);
                 } else {
                     switchMode(true);
                 }
-                startTimer();
+                setTimeout(function() {
+                    startTimer();
+                }, (3 * 1000));
             }
         }, 1000);
     }
