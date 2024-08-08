@@ -22,7 +22,7 @@ h1 {
 .mode-switch {
     display: flex;
     justify-content: center;
-    margin-bottom: 0rem;
+    margin-bottom: 1rem;
     padding: 0.5rem;
     border-radius: 30px;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
@@ -64,9 +64,9 @@ h1 {
 
 .timer-container {
     position: relative;
-    width: 360px;
-    height: 350px;
-
+    width: 480px;
+    height: 480px;
+    margin-bottom: 1rem;
 }
 
 #progress-ring {
@@ -78,18 +78,18 @@ h1 {
 #background-circle {
     fill: none;
     stroke: #5f5f5f; /* Background circle color */
-    stroke-width: 4;
+    stroke-width: 6;
     filter: url(#glow);
 }
 
 #progress {
     fill: none;
     stroke: #E0218A;
-    stroke-width: 4;
-    stroke-dasharray: 753.6; /* Circumference of the circle (2 * π * 120) */
-    stroke-dashoffset: 753.6;
+    stroke-width: 6;
+    stroke-dasharray: 1130.973; /* Circumference of the circle (2 * π * 180) */
+    stroke-dashoffset: 1130.973;
     transition: stroke-dashoffset 1s linear;
-    transform-origin: 180px 180px;
+    transform-origin: 240px 240px;
     transform: rotate(-90deg);
 }
 
@@ -98,7 +98,7 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 3.5rem;
+    font-size: 6rem;
 }
 
 #time[contenteditable="true"]:focus {

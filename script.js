@@ -43,7 +43,7 @@ function updateDisplay() {
 
 function updateProgressRing() {
     const totalTime = isWorkMode ? workTime : breakTime;
-    const circumference = 2 * Math.PI * 100; // Circumference of the circle with radius 100
+    const circumference = 2 * Math.PI * 180; // Circumference of the circle with radius 180
     const offset = (timeRemaining / totalTime) * circumference;
     console.log(`Total Time: ${totalTime}, Time Remaining: ${timeRemaining}, Offset: ${offset}`);
     progress.style.strokeDashoffset = circumference - offset;

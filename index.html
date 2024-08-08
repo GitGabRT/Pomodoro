@@ -15,7 +15,7 @@
             <button id="break-btn">break</button>
         </div>
         <div class="timer-container">
-            <svg id="progress-ring" width="360" height="360">
+            <svg id="progress-ring" width="480" height="480">
                 <defs>
                     <filter id="glow">
                         <feGaussianBlur stdDeviation="5" result="coloredBlur"></feGaussianBlur>
@@ -25,8 +25,8 @@
                         </feMerge>
                     </filter>
                 </defs>
-                <circle cx="180" cy="180" r="140" id="background-circle" filter="url(#glow)"></circle>
-                <circle cx="180" cy="180" r="120" id="progress"transform="rotate(-90 120 120)"></circle>
+                <circle cx="240" cy="240" r="200" id="background-circle" filter="url(#glow)"></circle>
+                <circle cx="240" cy="240" r="180" id="progress"transform="rotate(-90 240 240)"></circle>
             </svg>
             <div class="timer">
                 <span id="time" contenteditable="true">45:00</span>
